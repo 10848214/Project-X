@@ -3,7 +3,7 @@ import {SafeAreaView, StyleSheet, View, Text, Image, TouchableOpacity} from 'rea
 import {FlatList} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import COLORS from '../consts/colors';
-import books from '../consts/equipment';
+import equipment from '../consts/equipment';
 import BottomNavigator from './BottomNavigation';
 
 const Cart = ({navigation}) => {
@@ -44,7 +44,7 @@ const Cart = ({navigation}) => {
       <FlatList
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{paddingBottom: 80}}
-        data={books}
+        data={equipment}
         renderItem={({item}) => <CartCard item={item} />}
         ListFooterComponentStyle={{paddingHorizontal: 20, marginTop: 20}}
         ListFooterComponent={() => (
@@ -61,9 +61,9 @@ const Cart = ({navigation}) => {
               <Text style={{fontSize: 18, fontWeight: 'bold'}}>$442</Text>
             </View>
 
-          <TouchableOpacity onPress= {() => {navigation.navigate("Cart");}} >
+          <TouchableOpacity onPress= {() => {navigation.navigate("CheckOut");}} >
           <View style={{...style.btnContainer, marginTop: 40, marginBottom: 40}}>
-        <Text style={{...style.title, color: COLORS.white}}>CheckOut</Text>
+        <Text style={{...style.title, color: COLORS.white}}>Proceed to Checkout</Text>
           </View>
          </TouchableOpacity> 
         
